@@ -6,7 +6,7 @@
   
   <meta charset="UTF-8">
   <title>
-    Hugo使用手册 | ZJTOMOON.COM
+    Ssh Key生成和导入 | ZJTOMOON.COM
   </title>
 
 
@@ -14,7 +14,7 @@
   <meta name="viewport" content="width=device-width,user-scalable=no,maximum-scale=1,initial-scale=1">
 
   
-  <link rel="canonical" href="http://zjtomoon.github.io/post/hugo%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C/"/>
+  <link rel="canonical" href="http://zjtomoon.github.io/post/ssh-key%E7%94%9F%E6%88%90%E5%92%8C%E5%AF%BC%E5%85%A5/"/>
 
   
   <link rel="stylesheet" href="/css/sanitize.css">
@@ -60,27 +60,34 @@
   
   <main id="single" role="main">
     <div class="article-header">
-      <h1>Hugo使用手册</h1>
+      <h1>Ssh Key生成和导入</h1>
       <div class="meta">
         Jun 30, 2021 &nbsp;
         
       </div>
     </div>
     <article>
-      <h1 id="hugo博客搭建手册">hugo博客搭建手册</h1>
+      <h1 id="ssh-key生成并导入github的方法">ssh-key生成并导入github的方法</h1>
 <ul>
 <li>
-<p>创建新博文</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">hugo new post/name.md
+<p>1、设置git用户名和邮箱</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"> git config --global user.name <span style="color:#e6db74">&#34;yourusername&#34;</span>
+ git config --global user.email <span style="color:#e6db74">&#34;youremail&#34;</span>
 </code></pre></div></li>
 <li>
-<p>本地启动预览</p>
-<pre><code>hugo server -t angels-ladder(theme) -D -w
-</code></pre></li>
+<p>2、生成密钥</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ssh-keygen -t rsa -C <span style="color:#e6db74">&#34;emailname@qq.com&#34;</span>
+</code></pre></div></li>
 <li>
-<p>远程部署</p>
-<pre><code>hugo --theme=angels-ladder --baseUrl=&quot;http://zjtomoon.github.io/&quot;
-</code></pre></li>
+<p>3、添加SSH key到github账户</p>
+</li>
+<li>
+<p>4、测试SSH key是否设置成功</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ssh -T git@github.com
+</code></pre></div></li>
+<li>
+<p>5、更改.git/config文件为ssh形式</p>
+</li>
 </ul>
 
       
@@ -109,10 +116,8 @@
   
   <nav class="pagination-single">
     
-      <span class="previous">&larr; <a href="http://zjtomoon.github.io/post/ssh-key%E7%94%9F%E6%88%90%E5%92%8C%E5%AF%BC%E5%85%A5/" rel="prev">Ssh Key生成和导入</a></span>
     
-    
-      <span class="next"><a href="http://zjtomoon.github.io/post/%E7%AE%80%E5%8E%86/" rel="next">简历</a> &rarr;</span>
+      <span class="next"><a href="http://zjtomoon.github.io/post/hugo%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C/" rel="next">Hugo使用手册</a> &rarr;</span>
     
   </nav>
 
