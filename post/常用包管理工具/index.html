@@ -68,13 +68,13 @@
     </div>
     <article>
       <h2 id="go-env设置适合113版本以上">go env设置（适合1.13版本以上）</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">go env -w  GO111MODULE=auto
-go env -w  GOPROXY=https<span style="color:#960050;background-color:#1e0010">:</span>//goproxy.io,direct
-go env -w  GOPATH=D:\document\workspace\GoLang
-go env -w  GOROOT=D:\ProSoftware\golang\go1.14.windows-amd64\go
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">go env -w  GO111MODULE<span style="color:#f92672">=</span>auto
+go env -w  GOPROXY<span style="color:#f92672">=</span>https://goproxy.io,direct
+go env -w  GOPATH<span style="color:#f92672">=</span>/home/username/workspace/go
+go env -w  GOROOT<span style="color:#f92672">=</span>/home/username/sdks/go
 go get golang.org/x/tools/gopls@latest
 </code></pre></div><h2 id="pip设置">pip设置</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">linux的文件在~/.config/pip/pip.conf，
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">linux的文件在~/.config/pip/pip.conf，
 
 windows在Appdata<span style="color:#ae81ff">\R</span>oaming<span style="color:#ae81ff">\p</span>ip<span style="color:#ae81ff">\p</span>ip.ini），
 
