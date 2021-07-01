@@ -6,7 +6,20 @@
     <description>Recent content on ZJTOMOON.COM</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Wed, 30 Jun 2021 16:35:56 +0800</lastBuildDate><atom:link href="http://zjtomoon.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 01 Jul 2021 15:28:07 +0800</lastBuildDate><atom:link href="http://zjtomoon.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Rust离线版安装和编辑器配置</title>
+      <link>http://zjtomoon.github.io/post/rust%E7%A6%BB%E7%BA%BF%E7%89%88%E5%AE%89%E8%A3%85%E5%92%8C%E7%BC%96%E8%BE%91%E5%99%A8%E9%85%8D%E7%BD%AE/</link>
+      <pubDate>Thu, 01 Jul 2021 15:28:07 +0800</pubDate>
+      
+      <guid>http://zjtomoon.github.io/post/rust%E7%A6%BB%E7%BA%BF%E7%89%88%E5%AE%89%E8%A3%85%E5%92%8C%E7%BC%96%E8%BE%91%E5%99%A8%E9%85%8D%E7%BD%AE/</guid>
+      <description>rust离线版安装   1、解压离线包
+tar -zxvf rust-1.34.2-x86_64-unknown-linux-gnu.tar.gz -C ~/sdks   2、进入解压包执行.install.sh
+sudo ./install.sh   3、验证安装是否成功
+rustc --version cargo --version   配置编辑器vscode  1、首先下载对应版本的源码解压  tar -zxvf rustc-1.34.2-src.tar.gz -C ~/sdks  2、配置环境变量  vim ~/.bashrc export RUST_SRC_PATH=/home/alex/software/rustc-1.34.2-src/src  3、初始化环境变量  source ~/.bashrc  4、vscode安装rust(rls)插件并禁用rustup(勾选disable rustup选项)  配置编辑器emacs  1、克隆emacs配置，使用lsp-mode实现代码补全  https://gitee.com/zjtomoon/my-emacs-config.git  2、复制init.el到~/.emacs.d  cp my-emacs-config/init.el ~/.emacs.d   3、打开emacs自动加载插件，加载完毕后执行emacs命令
+M-x package-install ret rust-mode ret   </description>
+    </item>
+    
     <item>
       <title>Ssh Key生成和导入</title>
       <link>http://zjtomoon.github.io/post/ssh-key%E7%94%9F%E6%88%90%E5%92%8C%E5%AF%BC%E5%85%A5/</link>
