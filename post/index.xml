@@ -6,7 +6,16 @@
     <description>Recent content in Posts on ZJTOMOON.COM</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Sat, 03 Jul 2021 10:59:19 +0800</lastBuildDate><atom:link href="http://zjtomoon.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 03 Jul 2021 20:50:16 +0800</lastBuildDate><atom:link href="http://zjtomoon.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Datagrip连接虚拟机中的mysql连接失败的问题</title>
+      <link>http://zjtomoon.github.io/post/datagrip%E8%BF%9E%E6%8E%A5%E8%99%9A%E6%8B%9F%E6%9C%BA%E4%B8%AD%E7%9A%84mysql%E8%BF%9E%E6%8E%A5%E5%A4%B1%E8%B4%A5%E7%9A%84%E9%97%AE%E9%A2%98/</link>
+      <pubDate>Sat, 03 Jul 2021 20:50:16 +0800</pubDate>
+      
+      <guid>http://zjtomoon.github.io/post/datagrip%E8%BF%9E%E6%8E%A5%E8%99%9A%E6%8B%9F%E6%9C%BA%E4%B8%AD%E7%9A%84mysql%E8%BF%9E%E6%8E%A5%E5%A4%B1%E8%B4%A5%E7%9A%84%E9%97%AE%E9%A2%98/</guid>
+      <description>创建对外网开放的mysql用户 create user &amp;#39;tom&amp;#39; @ &amp;#39;%&amp;#39; identified by &amp;#39;123&amp;#39;; grant all privileges on *.* to &amp;#39;tom&amp;#39;@&amp;#39;%&amp;#39; identified by &amp;#39;123&amp;#39;; FLUSH PRIVILEGES; 修改my.cnf vim /etc/mysql/my.cnf ##注释bind-address #bind-address	127.0.0.1 bind-address	0.0.0.0 重启mysql sudo /etc/init.d/mysql restart </description>
+    </item>
+    
     <item>
       <title>Ubuntu编译安装redis</title>
       <link>http://zjtomoon.github.io/post/ubuntu%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85redis/</link>
