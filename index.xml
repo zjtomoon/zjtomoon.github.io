@@ -6,7 +6,16 @@
     <description>Recent content on ZJTOMOON.COM</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Thu, 01 Jul 2021 15:28:07 +0800</lastBuildDate><atom:link href="http://zjtomoon.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 03 Jul 2021 10:21:22 +0800</lastBuildDate><atom:link href="http://zjtomoon.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ubuntu编译安装emacs</title>
+      <link>http://zjtomoon.github.io/post/ubuntu%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85emacs/</link>
+      <pubDate>Sat, 03 Jul 2021 10:21:22 +0800</pubDate>
+      
+      <guid>http://zjtomoon.github.io/post/ubuntu%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85emacs/</guid>
+      <description>安装必要的依赖 sudo apt-get install build-essential 安装emacs需要的依赖 sudo apt-get build-dep emacs24 解压emacs源码包 tar -zxvf emacs-26.1.tar.gz -C ~/softwares 编译emacs cd ~/software/emacs-26.1/ ./config make ##(optionally) install emacs to /usr/local/bin sudo make install </description>
+    </item>
+    
     <item>
       <title>Rust离线版安装和编辑器配置</title>
       <link>http://zjtomoon.github.io/post/rust%E7%A6%BB%E7%BA%BF%E7%89%88%E5%AE%89%E8%A3%85%E5%92%8C%E7%BC%96%E8%BE%91%E5%99%A8%E9%85%8D%E7%BD%AE/</link>
