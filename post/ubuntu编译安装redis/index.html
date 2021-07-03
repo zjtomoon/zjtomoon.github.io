@@ -6,7 +6,7 @@
   
   <meta charset="UTF-8">
   <title>
-    Ubuntu编译安装emacs | ZJTOMOON.COM
+    Ubuntu编译安装redis | ZJTOMOON.COM
   </title>
 
 
@@ -14,7 +14,7 @@
   <meta name="viewport" content="width=device-width,user-scalable=no,maximum-scale=1,initial-scale=1">
 
   
-  <link rel="canonical" href="http://zjtomoon.github.io/post/ubuntu%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85emacs/"/>
+  <link rel="canonical" href="http://zjtomoon.github.io/post/ubuntu%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85redis/"/>
 
   
   <link rel="stylesheet" href="/css/sanitize.css">
@@ -60,25 +60,26 @@
   
   <main id="single" role="main">
     <div class="article-header">
-      <h1>Ubuntu编译安装emacs</h1>
+      <h1>Ubuntu编译安装redis</h1>
       <div class="meta">
         Jul 3, 2021 &nbsp;
         
       </div>
     </div>
     <article>
-      <h1 id="安装必要的依赖">安装必要的依赖</h1>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo apt-get install build-essential
-</code></pre></div><h1 id="安装emacs需要的依赖">安装emacs需要的依赖</h1>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo apt-get build-dep emacs24
-</code></pre></div><h1 id="解压emacs源码包">解压emacs源码包</h1>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">tar -zxvf emacs-26.1.tar.gz -C ~/softwares
-</code></pre></div><h1 id="编译emacs">编译emacs</h1>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cd ~/software/emacs-26.1/
-./config
+      <h1 id="编译redis">编译redis</h1>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">tar -zxvf redis-5.0.1.tar.gz -C ~/software
+cd ~/software/redis-5.0.1/
+<span style="color:#75715e">## compile</span>
 make
-<span style="color:#75715e">##(optionally) install emacs to /usr/local/bin</span>
+<span style="color:#75715e">## test </span>
+make test
+</code></pre></div><h2 id="安装redis">安装redis</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#make PREFIX=/some/other/directory install</span>
 sudo make install
+</code></pre></div><h1 id="开启redis服务">开启redis服务</h1>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cd utils
+./install_server.sh
 </code></pre></div>
       
       
@@ -106,10 +107,8 @@ sudo make install
   
   <nav class="pagination-single">
     
-      <span class="previous">&larr; <a href="http://zjtomoon.github.io/post/docker%E5%92%8Ck8s%E5%AE%89%E8%A3%85/" rel="prev">Docker和k8s安装</a></span>
     
-    
-      <span class="next"><a href="http://zjtomoon.github.io/post/rust%E7%A6%BB%E7%BA%BF%E7%89%88%E5%AE%89%E8%A3%85%E5%92%8C%E7%BC%96%E8%BE%91%E5%99%A8%E9%85%8D%E7%BD%AE/" rel="next">Rust离线版安装和编辑器配置</a> &rarr;</span>
+      <span class="next"><a href="http://zjtomoon.github.io/post/docker%E5%92%8Ck8s%E5%AE%89%E8%A3%85/" rel="next">Docker和k8s安装</a> &rarr;</span>
     
   </nav>
 
