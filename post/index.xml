@@ -6,7 +6,16 @@
     <description>Recent content in Posts on ZJTOMOON.COM</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Wed, 07 Jul 2021 11:23:33 +0800</lastBuildDate><atom:link href="http://zjtomoon.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 10 Jul 2021 07:56:10 +0800</lastBuildDate><atom:link href="http://zjtomoon.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ranger&#43;emacs Server配置</title>
+      <link>http://zjtomoon.github.io/post/ranger&#43;emacs-server%E9%85%8D%E7%BD%AE/</link>
+      <pubDate>Sat, 10 Jul 2021 07:56:10 +0800</pubDate>
+      
+      <guid>http://zjtomoon.github.io/post/ranger&#43;emacs-server%E9%85%8D%E7%BD%AE/</guid>
+      <description>安装pypi版ranger sudo pip3 install ranger-fm 开启emacs服务 emacs --daemon # 开启emacs服务，把emacs配置文件加载到内存中 设置emacs为默认编辑器 vim ~/.bashrc ##添加一行 export EDITOR=emacsclient source ~/.bashrc </description>
+    </item>
+    
     <item>
       <title>Mysql Workbench连接虚拟机中的mysql连接失败的问题</title>
       <link>http://zjtomoon.github.io/post/mysql-workbench%E8%BF%9E%E6%8E%A5%E8%99%9A%E6%8B%9F%E6%9C%BA%E4%B8%AD%E7%9A%84mysql%E8%BF%9E%E6%8E%A5%E5%A4%B1%E8%B4%A5%E7%9A%84%E9%97%AE%E9%A2%98/</link>
