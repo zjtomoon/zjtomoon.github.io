@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ZJTOMOON.COM</title>
+    <link>http://zjtomoon.github.io/</link>
+    <description>Recent content on ZJTOMOON.COM</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Mon, 26 Jul 2021 12:27:53 +0800</lastBuildDate><atom:link href="http://zjtomoon.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>曼昆经济学学习笔记</title>
+      <link>http://zjtomoon.github.io/economy/%E6%9B%BC%E6%98%86%E7%BB%8F%E6%B5%8E%E5%AD%A6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Mon, 26 Jul 2021 12:27:53 +0800</pubDate>
+      
+      <guid>http://zjtomoon.github.io/economy/%E6%9B%BC%E6%98%86%E7%BB%8F%E6%B5%8E%E5%AD%A6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid>
+      <description>曼昆宏微观经济学 </description>
+    </item>
+    
+    <item>
+      <title>Ubuntu14扁平美化</title>
+      <link>http://zjtomoon.github.io/post/ubuntu14.04%E6%89%81%E5%B9%B3%E7%BE%8E%E5%8C%96/</link>
+      <pubDate>Mon, 26 Jul 2021 11:09:05 +0800</pubDate>
+      
+      <guid>http://zjtomoon.github.io/post/ubuntu14.04%E6%89%81%E5%B9%B3%E7%BE%8E%E5%8C%96/</guid>
+      <description> 安装unity-tweak-tool  sudo apt-get install unity-tweak-tool  安装Flatabulous主题  sudo add-apt-repository ppa:noobslab/themes sudo apt-get update sudo apt-get install flatabulous-theme   安装ultra-flat-icons图标
+sudo add-apt-repository ppa:noobslab/icons sudo apt-get update sudo apt-get install ultra-flat-icons   3、打开Unity Tweak Tool，选择安装的主题和图标
+  </description>
+    </item>
+    
+    <item>
+      <title>Ubuntu挂载新硬盘</title>
+      <link>http://zjtomoon.github.io/post/ubuntu%E6%8C%82%E8%BD%BD%E6%96%B0%E7%A1%AC%E7%9B%98/</link>
+      <pubDate>Tue, 20 Jul 2021 10:12:49 +0800</pubDate>
+      
+      <guid>http://zjtomoon.github.io/post/ubuntu%E6%8C%82%E8%BD%BD%E6%96%B0%E7%A1%AC%E7%9B%98/</guid>
+      <description>1、使用以下命令查看硬盘使用情况 # 查看硬盘使用情况 df -h #查询硬盘名称 sudo fdisk -l 2、先清空需要挂载的硬盘中的内容，把ntfs格式化为ext4 sudo mkfs.ext4 /dev/sdbx 3、查询UUID、type等信息 sudo blkid /dev/sdbx 4、修改开机启动挂载硬盘 ##创建挂载点 mkdir ~/data1 sudo vim /etc/fstab #添加类似如下的一行 UUID=&amp;#34;f9f42ea2-8a3e-499f-a5b3-1ff3d30e01b7&amp;#34; /home/username/data ext4 defaults 0 2 5、最后执行命令进行挂载即可 sudo mount -a 6、重启系统，查看是否挂载成功  右键查看~/data属性 查看容量  </description>
+    </item>
+    
+    <item>
+      <title>Ubuntu创建eclipse快捷方式</title>
+      <link>http://zjtomoon.github.io/post/ubuntu%E5%88%9B%E5%BB%BAeclipse%E5%BF%AB%E6%8D%B7%E6%96%B9%E5%BC%8F/</link>
+      <pubDate>Sat, 10 Jul 2021 17:13:40 +0800</pubDate>
+      
+      <guid>http://zjtomoon.github.io/post/ubuntu%E5%88%9B%E5%BB%BAeclipse%E5%BF%AB%E6%8D%B7%E6%96%B9%E5%BC%8F/</guid>
+      <description>1. 解压文件
+tar xvf eclipse-SDK-4.2-linux-gtk-x86_64.tar.gz 2. 把解压后的文件移到相关目录，这里我假设是/opt，并设置好的权限
+mv eclipse /opt/ sudo chown root:root eclipse -R sudo chmod +r eclipse -R 3. 创建启动脚本。有很多种不同的实现方法，下面只是其中一种。
+sudo touch /usr/bin/eclipse sudo chmod 755 /usr/bin/eclipse sudo vim /usr/bin/eclipse 将如下内容写到刚创建的eclipse文件中
+#!/bin/sh export ECLIPSE_HOME=&amp;#34;/opt/eclipse&amp;#34; $ECLIPSE_HOME/eclipse $* 保存，退出。
+4. 创建Gnome菜单配置文件
+vim /usr/share/applications/eclipse.desktop 将如下内容写到刚创建的eclipse.desktop文件
+[Desktop Entry] Encoding=UTF-8 Name=Eclipse Comment=Eclipse IDE Exec=eclipse Icon=/opt/eclipse/icon.xpm Terminal=false Type=Application Categories=GNOME;Application;Development; StartupNotify=true 保存，退出。</description>
+    </item>
+    
+    <item>
+      <title>Ranger&#43;emacs Server配置</title>
+      <link>http://zjtomoon.github.io/post/ranger&#43;emacs-server%E9%85%8D%E7%BD%AE/</link>
+      <pubDate>Sat, 10 Jul 2021 07:56:10 +0800</pubDate>
+      
+      <guid>http://zjtomoon.github.io/post/ranger&#43;emacs-server%E9%85%8D%E7%BD%AE/</guid>
+      <description>安装pypi版ranger sudo pip3 install ranger-fm 开启emacs服务 emacs --daemon # 开启emacs服务，把emacs配置文件加载到内存中 设置emacs为默认编辑器 vim ~/.bashrc ##添加一行 export EDITOR=emacsclient source ~/.bashrc </description>
+    </item>
+    
+    <item>
+      <title>Mysql Workbench连接虚拟机中的mysql连接失败的问题</title>
+      <link>http://zjtomoon.github.io/post/mysql-workbench%E8%BF%9E%E6%8E%A5%E8%99%9A%E6%8B%9F%E6%9C%BA%E4%B8%AD%E7%9A%84mysql%E8%BF%9E%E6%8E%A5%E5%A4%B1%E8%B4%A5%E7%9A%84%E9%97%AE%E9%A2%98/</link>
+      <pubDate>Wed, 07 Jul 2021 11:23:33 +0800</pubDate>
+      
+      <guid>http://zjtomoon.github.io/post/mysql-workbench%E8%BF%9E%E6%8E%A5%E8%99%9A%E6%8B%9F%E6%9C%BA%E4%B8%AD%E7%9A%84mysql%E8%BF%9E%E6%8E%A5%E5%A4%B1%E8%B4%A5%E7%9A%84%E9%97%AE%E9%A2%98/</guid>
+      <description>创建对外网开放的mysql用户 create user &amp;#39;tom&amp;#39; @ &amp;#39;%&amp;#39; identified by &amp;#39;123&amp;#39;; grant all privileges on *.* to &amp;#39;tom&amp;#39;@&amp;#39;%&amp;#39; identified by &amp;#39;123&amp;#39;; FLUSH PRIVILEGES; 修改my.cnf vim /etc/mysql/my.cnf ##注释bind-address #bind-address	127.0.0.1 bind-address	0.0.0.0 重启mysql sudo /etc/init.d/mysql restart </description>
+    </item>
+    
+    <item>
+      <title>Ubuntu编译安装redis</title>
+      <link>http://zjtomoon.github.io/post/ubuntu%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85redis/</link>
+      <pubDate>Sat, 03 Jul 2021 10:59:19 +0800</pubDate>
+      
+      <guid>http://zjtomoon.github.io/post/ubuntu%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85redis/</guid>
+      <description>编译redis tar -zxvf redis-5.0.1.tar.gz -C ~/software cd ~/software/redis-5.0.1/ ## compile make ## test  make test 安装redis #make PREFIX=/some/other/directory install sudo make install 开启redis服务 cd utils ./install_server.sh </description>
+    </item>
+    
+    <item>
+      <title>Ubuntu编译安装emacs</title>
+      <link>http://zjtomoon.github.io/post/ubuntu%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85emacs/</link>
+      <pubDate>Sat, 03 Jul 2021 10:21:22 +0800</pubDate>
+      
+      <guid>http://zjtomoon.github.io/post/ubuntu%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85emacs/</guid>
+      <description>安装必要的依赖 sudo apt-get install build-essential 安装emacs需要的依赖 sudo apt-get build-dep emacs24 解压emacs源码包 tar -zxvf emacs-26.1.tar.gz -C ~/softwares 编译emacs cd ~/software/emacs-26.1/ ./config make ##(optionally) install emacs to /usr/local/bin sudo make install </description>
+    </item>
+    
+    <item>
+      <title>Rust离线版安装和编辑器配置</title>
+      <link>http://zjtomoon.github.io/post/rust%E7%A6%BB%E7%BA%BF%E7%89%88%E5%AE%89%E8%A3%85%E5%92%8C%E7%BC%96%E8%BE%91%E5%99%A8%E9%85%8D%E7%BD%AE/</link>
+      <pubDate>Thu, 01 Jul 2021 15:28:07 +0800</pubDate>
+      
+      <guid>http://zjtomoon.github.io/post/rust%E7%A6%BB%E7%BA%BF%E7%89%88%E5%AE%89%E8%A3%85%E5%92%8C%E7%BC%96%E8%BE%91%E5%99%A8%E9%85%8D%E7%BD%AE/</guid>
+      <description>rust离线版安装  1、解压离线包  tar -zxvf rust-1.34.2-x86_64-unknown-linux-gnu.tar.gz -C ~/sdks  2、进入解压包执行.install.sh  sudo ./install.sh  3、验证安装是否成功  rustc --version cargo --version 配置编辑器vscode  1、首先下载对应版本的源码解压  tar -zxvf rustc-1.34.2-src.tar.gz -C ~/sdks  2、配置环境变量  vim ~/.bashrc export RUST_SRC_PATH=/home/alex/software/rustc-1.34.2-src/src  3、初始化环境变量  source ~/.bashrc  4、vscode安装rust(rls)插件并禁用rustup(勾选disable rustup选项)  配置编辑器emacs  1、克隆emacs配置，使用lsp-mode实现代码补全  https://gitee.com/zjtomoon/my-emacs-config.git  2、复制init.el到~/.emacs.d  cp my-emacs-config/init.el ~/.emacs.d  3、打开emacs自动加载插件，加载完毕后执行emacs命令  M-x package-install ret rust-mode ret </description>
+    </item>
+    
+    <item>
+      <title>Ssh Key生成和导入</title>
+      <link>http://zjtomoon.github.io/post/ssh-key%E7%94%9F%E6%88%90%E5%92%8C%E5%AF%BC%E5%85%A5/</link>
+      <pubDate>Wed, 30 Jun 2021 16:35:56 +0800</pubDate>
+      
+      <guid>http://zjtomoon.github.io/post/ssh-key%E7%94%9F%E6%88%90%E5%92%8C%E5%AF%BC%E5%85%A5/</guid>
+      <description>ssh-key生成并导入github的方法   1、设置git用户名和邮箱
+git config --global user.name &amp;#34;yourusername&amp;#34; git config --global user.email &amp;#34;youremail&amp;#34;   2、生成密钥
+ssh-keygen -t rsa -C &amp;#34;emailname@qq.com&amp;#34;   3、添加SSH key到github账户
+  4、测试SSH key是否设置成功
+ssh -T git@github.com   5、更改.git/config文件为ssh形式
+  </description>
+    </item>
+    
+    <item>
+      <title>Hugo使用手册</title>
+      <link>http://zjtomoon.github.io/post/hugo%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C/</link>
+      <pubDate>Wed, 30 Jun 2021 15:21:32 +0800</pubDate>
+      
+      <guid>http://zjtomoon.github.io/post/hugo%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C/</guid>
+      <description>hugo博客搭建手册   创建新博文
+hugo new post/name.md   本地启动预览
+hugo server -t angels-ladder(theme) -D -w  远程部署
+hugo --theme=angels-ladder --baseUrl=&amp;quot;http://zjtomoon.github.io/&amp;quot;  </description>
+    </item>
+    
+    <item>
+      <title>Mysql安装与配置</title>
+      <link>http://zjtomoon.github.io/post/mysql%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/</link>
+      <pubDate>Wed, 30 Jun 2021 14:31:52 +0800</pubDate>
+      
+      <guid>http://zjtomoon.github.io/post/mysql%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/</guid>
+      <description>ubuntu安装 #安装 sudo apt install mariadb-client mariadb-server centos7 安装 #安装 sudo yum install mariadb-client mariadb-server #执行如下命令初始化数据库 设置root密码等信息 mysql_secure_installation #关闭防火墙，使得外网可以访问数据库 sudo systemctl stop firewalld #(optional) #sudo systemctl disable firewalld 添加用户 1. root权限登录 mysql -u root -p 2.添加用户 配置用户本地 IP 访问 localhost, 127.0.0.1 create user &amp;#39;username&amp;#39;@&amp;#39;localhost&amp;#39; identified by &amp;#39;password&amp;#39;; 配置用户外网 IP 访问 create user &amp;#39;username&amp;#39;@&amp;#39;%&amp;#39; identified by &amp;#39;password&amp;#39;; 刷新权限 FLUSH PRIVILEGES; 用户权限权限列表: grant all privileges on *.* to &amp;#39;username&amp;#39;@&amp;#39;%&amp;#39; identified by &amp;#39;password&amp;#39;; grant SELECT,DELETE,UPDATE on *.</description>
+    </item>
+    
+    <item>
+      <title>Mysql学习笔记和习题</title>
+      <link>http://zjtomoon.github.io/post/mysql%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E5%92%8C%E4%B9%A0%E9%A2%98/</link>
+      <pubDate>Wed, 30 Jun 2021 14:30:12 +0800</pubDate>
+      
+      <guid>http://zjtomoon.github.io/post/mysql%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E5%92%8C%E4%B9%A0%E9%A2%98/</guid>
+      <description>创建数据库 --bjpowernode.sql DROP TABLE IF EXISTS EMP; DROP TABLE IF EXISTS DEPT; DROP TABLE IF EXISTS SALGRADE; CREATE TABLE DEPT (DEPTNO int(2) not null , DNAME VARCHAR(14) , LOC VARCHAR(13), primary key (DEPTNO) ); CREATE TABLE EMP (EMPNO int(4) not null , ENAME VARCHAR(10), JOB VARCHAR(9), MGR INT(4), HIREDATE DATE DEFAULT NULL, SAL DOUBLE(7,2), COMM DOUBLE(7,2), primary key (EMPNO), DEPTNO INT(2) ) ; CREATE TABLE SALGRADE ( GRADE INT, LOSAL INT, HISAL INT ); INSERT INTO DEPT ( DEPTNO, DNAME, LOC ) VALUES ( 10, &amp;#39;ACCOUNTING&amp;#39;, &amp;#39;NEW YORK&amp;#39;); INSERT INTO DEPT ( DEPTNO, DNAME, LOC ) VALUES ( 20, &amp;#39;RESEARCH&amp;#39;, &amp;#39;DALLAS&amp;#39;); INSERT INTO DEPT ( DEPTNO, DNAME, LOC ) VALUES ( 30, &amp;#39;SALES&amp;#39;, &amp;#39;CHICAGO&amp;#39;); INSERT INTO DEPT ( DEPTNO, DNAME, LOC ) VALUES ( 40, &amp;#39;OPERATIONS&amp;#39;, &amp;#39;BOSTON&amp;#39;); commit; INSERT INTO EMP ( EMPNO, ENAME, JOB, MGR, HIREDATE, SAL, COMM, DEPTNO ) VALUES ( 7369, &amp;#39;SMITH&amp;#39;, &amp;#39;CLERK&amp;#39;, 7902, &amp;#39;1980-12-17&amp;#39; , 800, NULL, 20); INSERT INTO EMP ( EMPNO, ENAME, JOB, MGR, HIREDATE, SAL, COMM, DEPTNO ) VALUES ( 7499, &amp;#39;ALLEN&amp;#39;, &amp;#39;SALESMAN&amp;#39;, 7698, &amp;#39;1981-02-20&amp;#39; , 1600, 300, 30); INSERT INTO EMP ( EMPNO, ENAME, JOB, MGR, HIREDATE, SAL, COMM, DEPTNO ) VALUES ( 7521, &amp;#39;WARD&amp;#39;, &amp;#39;SALESMAN&amp;#39;, 7698, &amp;#39;1981-02-22&amp;#39; , 1250, 500, 30); INSERT INTO EMP ( EMPNO, ENAME, JOB, MGR, HIREDATE, SAL, COMM, DEPTNO ) VALUES ( 7566, &amp;#39;JONES&amp;#39;, &amp;#39;MANAGER&amp;#39;, 7839, &amp;#39;1981-04-02&amp;#39; , 2975, NULL, 20); INSERT INTO EMP ( EMPNO, ENAME, JOB, MGR, HIREDATE, SAL, COMM, DEPTNO ) VALUES ( 7654, &amp;#39;MARTIN&amp;#39;, &amp;#39;SALESMAN&amp;#39;, 7698, &amp;#39;1981-09-28&amp;#39; , 1250, 1400, 30); INSERT INTO EMP ( EMPNO, ENAME, JOB, MGR, HIREDATE, SAL, COMM, DEPTNO ) VALUES ( 7698, &amp;#39;BLAKE&amp;#39;, &amp;#39;MANAGER&amp;#39;, 7839, &amp;#39;1981-05-01&amp;#39; , 2850, NULL, 30); INSERT INTO EMP ( EMPNO, ENAME, JOB, MGR, HIREDATE, SAL, COMM, DEPTNO ) VALUES ( 7782, &amp;#39;CLARK&amp;#39;, &amp;#39;MANAGER&amp;#39;, 7839, &amp;#39;1981-06-09&amp;#39; , 2450, NULL, 10); INSERT INTO EMP ( EMPNO, ENAME, JOB, MGR, HIREDATE, SAL, COMM, DEPTNO ) VALUES ( 7788, &amp;#39;SCOTT&amp;#39;, &amp;#39;ANALYST&amp;#39;, 7566, &amp;#39;1987-04-19&amp;#39; , 3000, NULL, 20); INSERT INTO EMP ( EMPNO, ENAME, JOB, MGR, HIREDATE, SAL, COMM, DEPTNO ) VALUES ( 7839, &amp;#39;KING&amp;#39;, &amp;#39;PRESIDENT&amp;#39;, NULL, &amp;#39;1981-11-17&amp;#39; , 5000, NULL, 10); INSERT INTO EMP ( EMPNO, ENAME, JOB, MGR, HIREDATE, SAL, COMM, DEPTNO ) VALUES ( 7844, &amp;#39;TURNER&amp;#39;, &amp;#39;SALESMAN&amp;#39;, 7698, &amp;#39;1981-09-08&amp;#39; , 1500, 0, 30); INSERT INTO EMP ( EMPNO, ENAME, JOB, MGR, HIREDATE, SAL, COMM, DEPTNO ) VALUES ( 7876, &amp;#39;ADAMS&amp;#39;, &amp;#39;CLERK&amp;#39;, 7788, &amp;#39;1987-05-23&amp;#39; , 1100, NULL, 20); INSERT INTO EMP ( EMPNO, ENAME, JOB, MGR, HIREDATE, SAL, COMM, DEPTNO ) VALUES ( 7900, &amp;#39;JAMES&amp;#39;, &amp;#39;CLERK&amp;#39;, 7698, &amp;#39;1981-12-03&amp;#39; , 950, NULL, 30); INSERT INTO EMP ( EMPNO, ENAME, JOB, MGR, HIREDATE, SAL, COMM, DEPTNO ) VALUES ( 7902, &amp;#39;FORD&amp;#39;, &amp;#39;ANALYST&amp;#39;, 7566, &amp;#39;1981-12-03&amp;#39; , 3000, NULL, 20); INSERT INTO EMP ( EMPNO, ENAME, JOB, MGR, HIREDATE, SAL, COMM, DEPTNO ) VALUES ( 7934, &amp;#39;MILLER&amp;#39;, &amp;#39;CLERK&amp;#39;, 7782, &amp;#39;1982-01-23&amp;#39; , 1300, NULL, 10); commit; INSERT INTO SALGRADE ( GRADE, LOSAL, HISAL ) VALUES ( 1, 700, 1200); INSERT INTO SALGRADE ( GRADE, LOSAL, HISAL ) VALUES ( 2, 1201, 1400); INSERT INTO SALGRADE ( GRADE, LOSAL, HISAL ) VALUES ( 3, 1401, 2000); INSERT INTO SALGRADE ( GRADE, LOSAL, HISAL ) VALUES ( 4, 2001, 3000); INSERT INTO SALGRADE ( GRADE, LOSAL, HISAL ) VALUES ( 5, 3001, 9999); commit; --interview.</description>
+    </item>
+    
+    <item>
+      <title>Emacs Lsp Mode配置</title>
+      <link>http://zjtomoon.github.io/post/emacs-lsp-mode%E9%85%8D%E7%BD%AE/</link>
+      <pubDate>Wed, 30 Jun 2021 14:27:53 +0800</pubDate>
+      
+      <guid>http://zjtomoon.github.io/post/emacs-lsp-mode%E9%85%8D%E7%BD%AE/</guid>
+      <description>go-mode go env -w GOPROXY=https://goproxy.io,direct go get golang.org/x/tools/gopls@latest shell-mode npm --registry https://registry.npm.taobao.org i -g bash-language-server rust-mode emacs ~/.bashrc export RUST_SRC_PATH=/home/alex/software/rustc-1.34.2-src/src </description>
+    </item>
+    
+    <item>
+      <title>常用包管理工具</title>
+      <link>http://zjtomoon.github.io/post/%E5%B8%B8%E7%94%A8%E5%8C%85%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7/</link>
+      <pubDate>Wed, 30 Jun 2021 14:27:22 +0800</pubDate>
+      
+      <guid>http://zjtomoon.github.io/post/%E5%B8%B8%E7%94%A8%E5%8C%85%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7/</guid>
+      <description>go env设置（适合1.13版本以上） go env -w GO111MODULE=auto go env -w GOPROXY=https://goproxy.io,direct go env -w GOPATH=/home/username/workspace/go go env -w GOROOT=/home/username/sdks/go go get golang.org/x/tools/gopls@latest cargo(~/.cargo/config) [source.crates-io] registry = &amp;#34;https://github.com/rust-lang/crates.io-index&amp;#34; replace-with = &amp;#39;rustcc&amp;#39; [source.rustcc] registry = &amp;#34;https://code.aliyun.com/rustcc/crates.io-index.git&amp;#34; </description>
+    </item>
+    
+  </channel>
+</rss>
