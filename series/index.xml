@@ -5,6 +5,16 @@
     <link>http://zjtomoon.github.io/series/</link>
     <description>Recent content in Series on ZJTOMOON.COM</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>ja</language><atom:link href="http://zjtomoon.github.io/series/index.xml" rel="self" type="application/rss+xml" />
+    <language>ja</language>
+    <lastBuildDate>Wed, 30 Jun 2021 14:27:53 +0800</lastBuildDate><atom:link href="http://zjtomoon.github.io/series/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>计算机</title>
+      <link>http://zjtomoon.github.io/series/%E8%AE%A1%E7%AE%97%E6%9C%BA/</link>
+      <pubDate>Wed, 30 Jun 2021 14:27:53 +0800</pubDate>
+      
+      <guid>http://zjtomoon.github.io/series/%E8%AE%A1%E7%AE%97%E6%9C%BA/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>
