@@ -6,7 +6,26 @@
     <description>Recent content in Posts on ZJTOMOON.COM</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Tue, 27 Jul 2021 09:53:54 +0800</lastBuildDate><atom:link href="http://zjtomoon.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 31 Jul 2021 07:34:51 +0800</lastBuildDate><atom:link href="http://zjtomoon.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ubuntu常用工具</title>
+      <link>http://zjtomoon.github.io/post/computer/ubuntu%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7/</link>
+      <pubDate>Sat, 31 Jul 2021 07:34:51 +0800</pubDate>
+      
+      <guid>http://zjtomoon.github.io/post/computer/ubuntu%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7/</guid>
+      <description>  C++ 编码：eclipse-neon-cpp/codeblocks(apt-get)/codelite
+  Rust编码：emacs + rls
+  Go编码：emacs + gopls
+  Shell脚本：emacs + bash-language-server
+  磁力下载软件：qbittorrent
+  视频播放：vlc
+  输入法：ibus-rime
+  Office:卸载libreoffice 安装wps-office
+  电子书书架：calibre
+  数据库工具：mycli
+#安装方法 $ pip install -U mycli   </description>
+    </item>
+    
     <item>
       <title>Cmake常用语句</title>
       <link>http://zjtomoon.github.io/post/computer/cmake%E5%B8%B8%E7%94%A8%E8%AF%AD%E5%8F%A5/</link>
@@ -165,7 +184,7 @@ hugo --theme=angels-ladder --baseUrl=&amp;quot;http://zjtomoon.github.io/&amp;qu
       <pubDate>Wed, 30 Jun 2021 14:27:22 +0800</pubDate>
       
       <guid>http://zjtomoon.github.io/post/computer/%E5%B8%B8%E7%94%A8%E5%8C%85%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7/</guid>
-      <description>go env设置（适合1.13版本以上） go env -w GO111MODULE=auto go env -w GOPROXY=https://goproxy.io,direct go env -w GOPATH=/home/username/workspace/go go env -w GOROOT=/home/username/sdks/go go get golang.org/x/tools/gopls@latest cargo(~/.cargo/config) [source.crates-io] registry = &amp;#34;https://github.com/rust-lang/crates.io-index&amp;#34; replace-with = &amp;#39;rustcc&amp;#39; [source.rustcc] registry = &amp;#34;https://code.aliyun.com/rustcc/crates.io-index.git&amp;#34; </description>
+      <description>go env设置（适合1.13版本以上） go env -w GO111MODULE=auto go env -w GOPROXY=https://goproxy.io,direct go env -w GOPATH=/home/username/workspace/go go env -w GOROOT=/home/username/sdks/go go get golang.org/x/tools/gopls@latest pip设置 linux的文件在~/.config/pip/pip.conf， windows在Appdata\Roaming\pip\pip.ini）， 修改内容为： [global] index-url = https://pypi.douban.com/simple python -m pip install --upgrade pip cargo(~/.cargo/config) [source.crates-io] registry = &amp;#34;https://github.com/rust-lang/crates.io-index&amp;#34; replace-with = &amp;#39;rustcc&amp;#39; [source.rustcc] registry = &amp;#34;https://code.aliyun.com/rustcc/crates.io-index.git&amp;#34; </description>
     </item>
     
   </channel>

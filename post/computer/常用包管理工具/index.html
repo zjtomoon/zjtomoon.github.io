@@ -73,6 +73,18 @@ go env -w  GOPROXY<span style="color:#f92672">=</span>https://goproxy.io,direct
 go env -w  GOPATH<span style="color:#f92672">=</span>/home/username/workspace/go
 go env -w  GOROOT<span style="color:#f92672">=</span>/home/username/sdks/go
 go get golang.org/x/tools/gopls@latest
+</code></pre></div><h2 id="pip设置">pip设置</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">linux的文件在~/.config/pip/pip.conf，
+
+windows在Appdata<span style="color:#ae81ff">\R</span>oaming<span style="color:#ae81ff">\p</span>ip<span style="color:#ae81ff">\p</span>ip.ini），
+
+修改内容为：
+
+<span style="color:#f92672">[</span>global<span style="color:#f92672">]</span>
+index-url <span style="color:#f92672">=</span> https://pypi.douban.com/simple
+
+python -m pip install --upgrade pip
+
 </code></pre></div><h2 id="cargocargoconfig">cargo(~/.cargo/config)</h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">[</span>source.crates-io<span style="color:#f92672">]</span>
 registry <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;https://github.com/rust-lang/crates.io-index&#34;</span>
