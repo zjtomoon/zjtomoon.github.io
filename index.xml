@@ -23,7 +23,8 @@
   Office:卸载libreoffice 安装wps-office
   电子书书架：calibre
   数据库工具：mycli
-#安装方法 $ pip install -U mycli   </description>
+#安装方法 $ pip install -U mycli   进程查看工具htop
+$ sudo apt-get install htop    </description>
     </item>
     
     <item>
