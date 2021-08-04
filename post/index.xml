@@ -185,7 +185,7 @@ hugo --theme=angels-ladder --baseUrl=&amp;quot;http://zjtomoon.github.io/&amp;qu
       <pubDate>Wed, 30 Jun 2021 14:27:22 +0800</pubDate>
       
       <guid>http://zjtomoon.github.io/post/computer/%E5%B8%B8%E7%94%A8%E5%8C%85%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7/</guid>
-      <description>go env设置（适合1.13版本以上） go env -w GO111MODULE=auto go env -w GOPROXY=https://goproxy.io,direct go env -w GOPATH=/home/username/workspace/go go env -w GOROOT=/home/username/sdks/go go get golang.org/x/tools/gopls@latest pip设置 linux的文件在~/.config/pip/pip.conf， windows在Appdata\Roaming\pip\pip.ini）， 修改内容为： [global] index-url = https://pypi.douban.com/simple python -m pip install --upgrade pip cargo(~/.cargo/config) [source.crates-io] registry = &amp;#34;https://github.com/rust-lang/crates.io-index&amp;#34; replace-with = &amp;#39;rustcc&amp;#39; [source.rustcc] registry = &amp;#34;https://code.aliyun.com/rustcc/crates.io-index.git&amp;#34; </description>
+      <description>go env设置（适合1.13版本以上） go env -w GO111MODULE=auto go env -w GOPROXY=https://goproxy.io,direct go env -w GOPATH=/home/username/workspace/go go env -w GOROOT=/home/username/sdks/go go get golang.org/x/tools/gopls@latest pip设置 linux的文件在~/.config/pip/pip.conf， windows在Appdata\Roaming\pip\pip.ini）， 修改内容为： [global] index-url = https://pypi.douban.com/simple python -m pip install --upgrade pip cargo(~/.cargo/config) [source.crates-io] registry = &amp;#34;https://github.com/rust-lang/crates.io-index&amp;#34; replace-with = &amp;#39;sjtu&amp;#39; [source.sjtu] registry = &amp;#34;https://mirrors.sjtug.sjtu.edu.cn/git/crates.io-index/&amp;#34; </description>
     </item>
     
   </channel>
