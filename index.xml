@@ -22,7 +22,7 @@
   输入法：ibus-rime
   Office:卸载libreoffice 安装wps-office
   电子书书架：calibre
-  数据库工具：mycli
+  数据库工具：mysql-workbench
 #安装方法 $ pip install -U mycli   进程查看工具htop
 $ sudo apt-get install htop    </description>
     </item>
@@ -88,15 +88,6 @@ vim /usr/share/applications/eclipse.desktop 将如下内容写到刚创建的ecl
       
       <guid>http://zjtomoon.github.io/post/computer/ranger&#43;emacs-server%E9%85%8D%E7%BD%AE/</guid>
       <description>安装pypi版ranger sudo pip3 install ranger-fm 开启emacs服务 emacs --daemon # 开启emacs服务，把emacs配置文件加载到内存中 设置emacs为默认编辑器 vim ~/.bashrc ##添加一行 export EDITOR=emacsclient source ~/.bashrc </description>
-    </item>
-    
-    <item>
-      <title>Mysql Workbench连接虚拟机中的mysql连接失败的问题</title>
-      <link>http://zjtomoon.github.io/post/computer/mysql-workbench%E8%BF%9E%E6%8E%A5%E8%99%9A%E6%8B%9F%E6%9C%BA%E4%B8%AD%E7%9A%84mysql%E8%BF%9E%E6%8E%A5%E5%A4%B1%E8%B4%A5%E7%9A%84%E9%97%AE%E9%A2%98/</link>
-      <pubDate>Wed, 07 Jul 2021 11:23:33 +0800</pubDate>
-      
-      <guid>http://zjtomoon.github.io/post/computer/mysql-workbench%E8%BF%9E%E6%8E%A5%E8%99%9A%E6%8B%9F%E6%9C%BA%E4%B8%AD%E7%9A%84mysql%E8%BF%9E%E6%8E%A5%E5%A4%B1%E8%B4%A5%E7%9A%84%E9%97%AE%E9%A2%98/</guid>
-      <description>创建对外网开放的mysql用户 create user &amp;#39;tom&amp;#39; @ &amp;#39;%&amp;#39; identified by &amp;#39;123&amp;#39;; grant all privileges on *.* to &amp;#39;tom&amp;#39;@&amp;#39;%&amp;#39; identified by &amp;#39;123&amp;#39;; FLUSH PRIVILEGES; 修改my.cnf vim /etc/mysql/my.cnf ##注释bind-address #bind-address	127.0.0.1 bind-address	0.0.0.0 重启mysql sudo /etc/init.d/mysql restart </description>
     </item>
     
     <item>
@@ -185,7 +176,7 @@ hugo --theme=angels-ladder --baseUrl=&amp;quot;http://zjtomoon.github.io/&amp;qu
       <pubDate>Wed, 30 Jun 2021 14:27:22 +0800</pubDate>
       
       <guid>http://zjtomoon.github.io/post/computer/%E5%B8%B8%E7%94%A8%E5%8C%85%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7/</guid>
-      <description>go env设置（适合1.13版本以上） go env -w GO111MODULE=auto go env -w GOPROXY=https://goproxy.io,direct go env -w GOPATH=/home/username/workspace/go go env -w GOROOT=/home/username/sdks/go go get golang.org/x/tools/gopls@latest pip设置 linux的文件在~/.config/pip/pip.conf， windows在Appdata\Roaming\pip\pip.ini）， 修改内容为： [global] index-url = https://pypi.douban.com/simple python -m pip install --upgrade pip npm设置 npm config set registry=&amp;#34;https://registry.npm.taobao.org&amp;#34; </description>
+      <description>go env设置（适合1.13版本以上） go env -w GO111MODULE=auto go env -w GOPROXY=https://goproxy.io,direct go env -w GOPATH=/home/username/workspace/go go env -w GOROOT=/home/username/sdks/go go get golang.org/x/tools/gopls@latest npm设置 npm config set registry=&amp;#34;https://registry.npm.taobao.org&amp;#34; </description>
     </item>
     
   </channel>
