@@ -83,6 +83,36 @@ mysql_secure_installation
 sudo systemctl stop firewalld
 <span style="color:#75715e">#(optional)</span>
 <span style="color:#75715e">#sudo systemctl disable firewalld</span>
+</code></pre></div><h2 id="解压版安装">解压版安装</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#解压文件</span>
+tar -zxvf  mariadb-10.0.10-linux-x86_64.tar.gz -C ~/sdks
+<span style="color:#75715e">#移动文件至指定目录</span>
+mkdir -p /usr/local/mariadb
+mv mariadb-10.0.10-linux-x86_64/* /usr/local/mariadb
+<span style="color:#75715e">#进入/usr/local/mariadb</span>
+<span style="color:#75715e">#重命名my.cnf为my.cnf.bak，并将mariadb/support-files下的my-small.cnf文件拷贝至etc并命名为my.cnf</span>
+cp my-small.cnf /etc/my.cnf
+<span style="color:#75715e">#修改my.cnf文件在[mysqld]标签下添加basedir属性</span>
+basedir<span style="color:#f92672">=</span>/usr/local/mariadb
+<span style="color:#75715e">#初次安装，需要创建mysql用户和组，并给当前目录赋值</span>
+groupadd mysql
+useradd -r -g mysql -s /sbin/nologin mysql
+chown -R mysql .
+chgrp -R mysql .
+<span style="color:#75715e">#执行初始化安装</span>
+./scripts/mysql_install_db  --user<span style="color:#f92672">=</span>mysql
+<span style="color:#75715e">#调整权限</span>
+chown -R root .
+chown -R mysql data/
+<span style="color:#75715e">#添加mysql到服务目录</span>
+cp support-files/mysql.server /etc/init.d/mysqld
+<span style="color:#75715e">#第一次安装需要启动服务</span>
+/etc/init.d/mysqld start
+<span style="color:#75715e">#初始化操作</span>
+systemctl start mysqld
+systemctl enable mysqld
+<span style="color:#75715e">#创建root密码</span>
+mysqladmin -u root password <span style="color:#e6db74">&#39;123&#39;</span>
 </code></pre></div><h2 id="添加用户">添加用户</h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"> 1. root权限登录 mysql -u root -p
  2.添加用户  
