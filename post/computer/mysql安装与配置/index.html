@@ -74,6 +74,9 @@ sudo apt install mariadb-client mariadb-server
 </code></pre></div><h2 id="centos7-安装">centos7 安装</h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#安装</span>
 sudo yum install mariadb-client mariadb-server
+<span style="color:#75715e">#启动mysqld</span>
+sudo systemctl start mysqld/mariadb
+sudo systemctl enable mysqld/mariadb
 <span style="color:#75715e">#执行如下命令初始化数据库 设置root密码等信息</span>
 mysql_secure_installation
 <span style="color:#75715e">#关闭防火墙，使得外网可以访问数据库</span>
