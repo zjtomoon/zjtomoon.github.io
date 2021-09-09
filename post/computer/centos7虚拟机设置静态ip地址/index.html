@@ -1,0 +1,186 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+
+  
+  <meta charset="UTF-8">
+  <title>
+    Centos7虚拟机设置静态ip地址 | ZJTOMOON.COM
+  </title>
+
+
+  
+  <meta name="viewport" content="width=device-width,user-scalable=no,maximum-scale=1,initial-scale=1">
+
+  
+  <link rel="canonical" href="http://zjtomoon.github.io/post/computer/centos7%E8%99%9A%E6%8B%9F%E6%9C%BA%E8%AE%BE%E7%BD%AE%E9%9D%99%E6%80%81ip%E5%9C%B0%E5%9D%80/"/>
+
+  
+  <link rel="stylesheet" href="/css/sanitize.css">
+  <link rel="stylesheet" href="/css/responsive.css">
+  <link rel="stylesheet" href="/css/highlight_monokai.css">
+  <link rel="stylesheet" href="/css/theme.css">
+  <link rel="stylesheet" href="/css/custom.css">
+  
+  
+  <link href="http://zjtomoon.github.io/index.xml" rel="alternate" type="application/rss+xml" title="ZJTOMOON.COM" />
+  <link href="http://zjtomoon.github.io/index.xml" rel="feed" type="application/rss+xml" title="ZJTOMOON.COM" />
+
+  
+  
+
+
+</head>
+
+
+
+<body>
+<div class="container">
+
+  
+  <header role="banner">
+    <div class="row gutters">
+      <div id="site-title" class="col span_6">
+        <h1><a href="http://zjtomoon.github.io/">ZJTOMOON.COM</a></h1>
+        <h2>My Tech Blog</h2>
+      </div>
+      <div id="social" class="col span_6">
+        <ul>
+          
+          
+          <li><a href="https://github.com/zjtomoon" target="_blank">GitHub</a></li>
+          
+        </ul>
+      </div>
+    </div>
+  </header>
+
+
+  
+  <main id="single" role="main">
+    <div class="article-header">
+      <h1>Centos7虚拟机设置静态ip地址</h1>
+      <div class="meta">
+        Sep 9, 2021 &nbsp;
+        
+      </div>
+    </div>
+    <article>
+      <ul>
+<li>
+<p>1、virtual虚拟机设置两种网卡，分别为NAT和host-only模式</p>
+</li>
+<li>
+<p>2、路径：/etc/sysconfig/network-scripts存在ifcfg-enp0s3，查看配置文件</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cat vim ifcfg-enp0s3
+  
+ TYPE<span style="color:#f92672">=</span>Ethernet
+ PROXY_METHOD<span style="color:#f92672">=</span>none
+ BROWSER_ONLY<span style="color:#f92672">=</span>no
+ BOOTPROTO<span style="color:#f92672">=</span>dhcp
+ DEFROUTE<span style="color:#f92672">=</span>yes
+ IPV4_FAILURE_FATAL<span style="color:#f92672">=</span>no
+ IPV6INIT<span style="color:#f92672">=</span>yes
+ IPV6_AUTOCONF<span style="color:#f92672">=</span>yes
+ IPV6_DEFROUTE<span style="color:#f92672">=</span>yes
+ IPV6_FAILURE_FATAL<span style="color:#f92672">=</span>no
+ IPV6_ADDR_GEN_MODE<span style="color:#f92672">=</span>stable-privacy
+ NAME<span style="color:#f92672">=</span>enp0s3
+ UUID<span style="color:#f92672">=</span>bd6e75a6-07f4-40bc-bd4e-2ef269466f4b
+ DEVICE<span style="color:#f92672">=</span>enp0s3
+ ONBOOT<span style="color:#f92672">=</span>yes
+</code></pre></div></li>
+<li>
+<p>3、复制ifcfg-enp0s3，cp ifcfg-enp0s3 ifcfg-enp0s8</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># 修改：</span>
+  
+<span style="color:#75715e">#  BOOTPROTO=dhcp 改为 BOOTPROTO=static</span>
+  
+<span style="color:#75715e"># 　　NAME=enp0s3 改为 NAME=enp0s8  # 这是网卡名，可以用ip a查看</span>
+  
+<span style="color:#75715e"># 　　DEVICE=enp0s3 改为 DEVICE=enp0s8</span>
+  
+<span style="color:#75715e"># 　　UUID 也需要修改，UUID可以重新生成一个，直接在命令行输入 uuidgen，回车就会出现结果，把结果复制过来。</span>
+  
+<span style="color:#75715e"># 添加：</span>
+  
+<span style="color:#75715e"># 　　IPADDR=192.168.56.119 （根据添加的第二网卡的ip范围内即可，默认是 192.168.56.101——192.168.56.255）</span>
+  
+<span style="color:#75715e"># 　　NETMASK=255.255.255.0</span>
+  
+<span style="color:#75715e"># 修改结果为：</span>
+<span style="color:#75715e"># catifcfg-enp0s8</span>
+ TYPE<span style="color:#f92672">=</span>Ethernet
+ PROXY_METHOD<span style="color:#f92672">=</span>none
+ BROWSER_ONLY<span style="color:#f92672">=</span>no
+ BOOTPROTO<span style="color:#f92672">=</span>staticDEFROUTE<span style="color:#f92672">=</span>yes
+ IPV4_FAILURE_FATAL<span style="color:#f92672">=</span>no
+ IPV6INIT<span style="color:#f92672">=</span>yes
+ IPV6_AUTOCONF<span style="color:#f92672">=</span>yes
+ IPV6_DEFROUTE<span style="color:#f92672">=</span>yes
+ IPV6_FAILURE_FATAL<span style="color:#f92672">=</span>no
+ IPV6_ADDR_GEN_MODE<span style="color:#f92672">=</span>stable-privacy
+ NAME<span style="color:#f92672">=</span>enp0s8
+ UUID<span style="color:#f92672">=</span>1ef92600-8b30-437c-bb01-e8be0285a29d
+ DEVICE<span style="color:#f92672">=</span>enp0s8ONBOOT<span style="color:#f92672">=</span>yes
+ IPADDR<span style="color:#f92672">=</span>192.168.56.101
+ NETMASK<span style="color:#f92672">=</span>255.255.255.0
+</code></pre></div></li>
+<li>
+<p>4、重启网络</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo systemctl restart network
+</code></pre></div></li>
+</ul>
+
+      
+      
+      
+    </article>
+    
+ <aside><div id="disqus_thread"></div></aside>
+
+<script type="text/javascript">
+     
+    var disqus_shortname = 'zjtomoon';
+
+     
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+
+
+  </main>
+  
+  <nav class="pagination-single">
+    
+    
+      <span class="next"><a href="http://zjtomoon.github.io/post/computer/ubuntu%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7/" rel="next">Ubuntu常用工具</a> &rarr;</span>
+    
+  </nav>
+
+
+  
+  <footer role="contentinfo">
+    <div style="text-align:center;">
+      <img src="/images/profile.png" width="64" height="64"><br>
+      Written by Zjtomoon
+    </div>
+  </footer>
+
+
+</div>
+
+<script src="/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+</body>
+</html>
+
