@@ -75,6 +75,14 @@ go env -w  GOROOT<span style="color:#f92672">=</span>/home/username/sdks/go
 go get golang.org/x/tools/gopls@latest
 </code></pre></div><h2 id="npm设置">npm设置</h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">npm config set registry<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://registry.npm.taobao.org&#34;</span>
+</code></pre></div><h2 id="pip设置">pip设置</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># mkdir -p ~/.config/pip</span>
+<span style="color:#75715e"># vim ~/.config/pip/pip.conf</span>
+
+<span style="color:#f92672">[</span>global<span style="color:#f92672">]</span>
+index-url <span style="color:#f92672">=</span>http://pypi.douban.com/simple/
+<span style="color:#f92672">[</span>install<span style="color:#f92672">]</span>
+trusted-host <span style="color:#f92672">=</span>pypi.douban.com
 </code></pre></div>
       
       
