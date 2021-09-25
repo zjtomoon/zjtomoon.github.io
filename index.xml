@@ -117,7 +117,7 @@ vim /usr/share/applications/eclipse.desktop 将如下内容写到刚创建的ecl
       <pubDate>Sat, 03 Jul 2021 10:21:22 +0800</pubDate>
       
       <guid>http://zjtomoon.github.io/post/computer/ubuntu%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85emacs/</guid>
-      <description>安装必要的依赖 sudo apt-get install build-essential 安装emacs需要的依赖 sudo apt-get build-dep emacs24 解压emacs源码包 tar -zxvf emacs-26.1.tar.gz -C ~/softwares 编译emacs cd ~/software/emacs-26.1/ ./config make ##(optionally) install emacs to /usr/local/bin sudo make install </description>
+      <description>安装必要的依赖 sudo apt-get install build-essential 安装emacs需要的依赖 sudo apt-get build-dep emacs24 #centos7 sudo yum-builddep emacs 解压emacs源码包 tar -zxvf emacs-26.1.tar.gz -C ~/softwares 编译emacs cd ~/software/emacs-26.1/ ./config make ##(optionally) install emacs to /usr/local/bin sudo make install </description>
     </item>
     
     <item>
