@@ -13,7 +13,7 @@
       <pubDate>Sun, 26 Sep 2021 07:57:29 +0800</pubDate>
       
       <guid>http://zjtomoon.github.io/post/computer/centos7%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/</guid>
-      <description>htop(top升级版 ) 安装 yum -y install epel-release.noarch yum -y install htop </description>
+      <description>htop(top升级版) 安装 yum -y install epel-release.noarch yum -y install htop </description>
     </item>
     
     <item>
