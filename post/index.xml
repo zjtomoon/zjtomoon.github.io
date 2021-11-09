@@ -6,7 +6,22 @@
     <description>Recent content in Posts on ZJTOMOON.COM</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Sun, 26 Sep 2021 07:57:29 +0800</lastBuildDate><atom:link href="http://zjtomoon.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 09 Nov 2021 14:12:50 +0800</lastBuildDate><atom:link href="http://zjtomoon.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Centos编译安装gcc和vim</title>
+      <link>http://zjtomoon.github.io/post/computer/centos%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85gcc%E5%92%8Cvim/</link>
+      <pubDate>Tue, 09 Nov 2021 14:12:50 +0800</pubDate>
+      
+      <guid>http://zjtomoon.github.io/post/computer/centos%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85gcc%E5%92%8Cvim/</guid>
+      <description>编译安装新版gcc  前提条件：gcc版本4.8.1以上
+   1、安装必要环境
+sudo yum install zlib-devel sudo yum install glibc-devel sudo yum install glibc-devel.i686 sudo yum install libstdc++-devel sudo yum install libstdc++-devel.i686   2、执行configure命令生成makefile
+./configure --enable-bootstrap --enable-languages=c,c++ --enable-threads=posix --enable-checking=release --enable-multilib --with-system-zlib # 不声明prefix则默认覆盖安装   3、执行编译和安装
+make sudo make install   编译安装vim   1、安装必要依赖
+sudo yum install ncurses-devel.x86_64   2、编译安装
+./configure make sudo make install   </description>
+    </item>
+    
     <item>
       <title>Centos7环境搭建</title>
       <link>http://zjtomoon.github.io/post/computer/centos7%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/</link>

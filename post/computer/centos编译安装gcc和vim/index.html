@@ -6,7 +6,7 @@
   
   <meta charset="UTF-8">
   <title>
-    Centos7环境搭建 | ZJTOMOON.COM
+    Centos编译安装gcc和vim | ZJTOMOON.COM
   </title>
 
 
@@ -14,7 +14,7 @@
   <meta name="viewport" content="width=device-width,user-scalable=no,maximum-scale=1,initial-scale=1">
 
   
-  <link rel="canonical" href="http://zjtomoon.github.io/post/computer/centos7%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/"/>
+  <link rel="canonical" href="http://zjtomoon.github.io/post/computer/centos%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85gcc%E5%92%8Cvim/"/>
 
   
   <link rel="stylesheet" href="/css/sanitize.css">
@@ -60,17 +60,52 @@
   
   <main id="single" role="main">
     <div class="article-header">
-      <h1>Centos7环境搭建</h1>
+      <h1>Centos编译安装gcc和vim</h1>
       <div class="meta">
-        Sep 26, 2021 &nbsp;
+        Nov 9, 2021 &nbsp;
         
       </div>
     </div>
     <article>
-      <h2 id="htoptop升级版-安装">htop(top升级版) 安装</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">yum -y install epel-release.noarch
-yum -y install htop
-</code></pre></div>
+      <h1 id="编译安装新版gcc">编译安装新版gcc</h1>
+<blockquote>
+<p>前提条件：gcc版本4.8.1以上</p>
+</blockquote>
+<ul>
+<li>
+<p>1、安装必要环境</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo yum install zlib-devel
+sudo yum install glibc-devel
+sudo yum install glibc-devel.i686
+sudo  yum install libstdc++-devel
+sudo  yum install libstdc++-devel.i686
+  
+</code></pre></div></li>
+<li>
+<p>2、执行configure命令生成makefile</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">./configure --enable-bootstrap --enable-languages<span style="color:#f92672">=</span>c,c++ --enable-threads<span style="color:#f92672">=</span>posix --enable-checking<span style="color:#f92672">=</span>release --enable-multilib --with-system-zlib
+<span style="color:#75715e"># 不声明prefix则默认覆盖安装</span>
+</code></pre></div></li>
+<li>
+<p>3、执行编译和安装</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">make 
+sudo make install
+</code></pre></div></li>
+</ul>
+<h1 id="编译安装vim">编译安装vim</h1>
+<ul>
+<li>
+<p>1、安装必要依赖</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo yum install ncurses-devel.x86_64
+</code></pre></div></li>
+<li>
+<p>2、编译安装</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">./configure
+make 
+sudo make install
+</code></pre></div></li>
+</ul>
+
       
       
       
@@ -97,10 +132,8 @@ yum -y install htop
   
   <nav class="pagination-single">
     
-      <span class="previous">&larr; <a href="http://zjtomoon.github.io/post/computer/centos%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85gcc%E5%92%8Cvim/" rel="prev">Centos编译安装gcc和vim</a></span>
     
-    
-      <span class="next"><a href="http://zjtomoon.github.io/post/computer/centos7%E8%99%9A%E6%8B%9F%E6%9C%BA%E8%AE%BE%E7%BD%AE%E9%9D%99%E6%80%81ip%E5%9C%B0%E5%9D%80/" rel="next">Centos7虚拟机设置静态ip地址</a> &rarr;</span>
+      <span class="next"><a href="http://zjtomoon.github.io/post/computer/centos7%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" rel="next">Centos7环境搭建</a> &rarr;</span>
     
   </nav>
 
